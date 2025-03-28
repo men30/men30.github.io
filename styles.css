@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: rgba(148, 135, 135); /* Цвет текста */
+  padding: 5px; /* Отступы вокруг текста */
+}
+p {
+  color: rgb(255, 0, 179);
+}
+b {
+  color: black;
+}
+i {
+  color: rgb(255, 0, 0);
+}
