@@ -14,16 +14,16 @@ body {
 }
 @keyframes color {
   0% {
-    background-color: rgba(241, 255, 116, 0.925);
+    background-color: rgba(255, 234, 116, 0.925);
   }
   25% {
-    background-color: rgb(176, 255, 30);
+    background-color: rgb(255, 206, 73);
   }
   50% {
-    background-color: rgb(60, 255, 125);
+    background-color: rgb(255, 209, 60);
   }
   100% {
-    background-color: rgb(183, 184, 159);
+    background-color: rgb(250, 255, 115);
   }
 }
 .nav {
@@ -53,4 +53,30 @@ h2 {
   color: rgb(39, 39, 39);
   padding: 5px;
   text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 8px #000000;
+  max-width: 100%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .container img {
+    width: calc(50% - 10px); /* 2 фото в ряд с отступами */
+  }
+}
+
+@media (max-width: 480px) {
+  .container img {
+    width: 100%; /* 1 фото в ряд */
+  }
 }
