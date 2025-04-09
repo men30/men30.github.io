@@ -1,82 +1,68 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-h1 {
-  display: flex;
-  justify-content: center;
-  color: rgb(0, 0, 0);
-  padding: 5px;
+  box-sizing: border-box;
 }
 body {
-  animation: color 8s infinite;
+  display: flex;
+  justify-content: center; /* Горизонтальное выравнивание */
+  height: 100vh; /* Высота во весь экран */
+  margin: 0; /* Убираем отступы */
 }
-@keyframes color {
+.centered-text {
+  text-align: center; /* Центрирование текста внутри блока */
+}
+
+p {
+  color: rgba(0, 0, 0, 0, 5);
+}
+b {
+  color: black;
+}
+i {
+  color: rgb(255, 0, 0);
+}
+
+@keyframes rainbow {
   0% {
-    background-color: rgba(255, 234, 116, 0.925);
-  }
-  25% {
-    background-color: rgb(255, 206, 73);
+    background-position: 0% 50%;
   }
   50% {
-    background-color: rgb(255, 209, 60);
+    background-position: 100% 50%;
   }
   100% {
-    background-color: rgb(250, 255, 115);
+    background-position: 0% 50%;
   }
 }
-.nav {
-  background-color: grey;
-  padding: 15px;
-}
-ul.nav {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-li a {
-  color: aliceblue;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 4px;
-  transition: background-color 0.3s;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center; /* Центрируем текст и блоки */
+  padding: 20px;
+  background: #f5f5f5;
+
+  height: 100vh; /* На всю высоту экрана */
+  background: linear-gradient(45deg, #000000, #6b6865, #2c2c21);
+  background-size: 800% 800%; /* Увеличиваем фон для анимации */
+  animation: rainbow 10s ease infinite;
 }
 
-li a :hover {
-  background-color: #000000;
+.content {
+  max-width: 800px; /* Ограничиваем ширину контента */
+  margin: 0 auto; /* Центрируем блок */
 }
-h2 {
-  display: flex;
-  justify-content: center;
-  color: rgb(39, 39, 39);
-  padding: 5px;
-  text-align: center;
-}
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-img {
-  width: 200px;
-  height: auto;
+
+.image-wrapper {
+  margin: 30px auto; /* Отступ сверху и снизу + авто-центрирование */
+  padding: 20px;
   border-radius: 10px;
-  margin: 10px;
-  box-shadow: 0 4px 8px #000000;
-  max-width: 100%;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .container img {
-    width: calc(50% - 10px); /* 2 фото в ряд с отступами */
-  }
+  display: inline-block; /* Чтобы padding не растягивал блок */
 }
 
-@media (max-width: 480px) {
-  .container img {
-    width: 100%; /* 1 фото в ряд */
-  }
+.round-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Круглое фото */
+  object-fit: cover; /* Обрезка по кругу */
+  display: block; /* Убираем лишние отступы */
 }
