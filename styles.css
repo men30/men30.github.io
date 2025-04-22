@@ -12,17 +12,7 @@ body {
   padding: 0;
   color: var(--text);
   line-height: 1.6;
-  transition: gradient 0.3s;
 }
-
-@keyframes gradient {
- 
- 0% {
-     background-color: #FFFFFF;
- }
- 100% {
-     background-color: #e6daa6;
- }
 
 header {
   background: linear-gradient(135deg, var(--mint), var(--lavender));
