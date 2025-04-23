@@ -11,7 +11,9 @@ body {
   margin: 0;
   padding: 0;
   color: var(--text);
+  background-color: var(--beige);
   line-height: 1.6;
+  animation: changecolor 8s infinite;
 }
 
 header {
@@ -25,6 +27,21 @@ header {
   font-weight: 700;
   color: rgb(85, 85, 85);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes changecolor {
+  0% {
+    background-color: #ffffff;
+  }
+  25% {
+    background-color: aqua;
+  }
+  50% {
+    background-color: green;
+  }
+  100% {
+    background-color: #00ff00;
+  }
 }
 
 nav {
@@ -120,4 +137,9 @@ footer {
 .welcome:hover {
   color: #000000;
   text-decoration: underline;
+}
+.description {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
